@@ -1,33 +1,284 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Kembaran OmeGirl</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 { color: #ff4757; }
-    </style>
+    <title>OmeGirl | Albion Online Guild</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Selamat Datang di Website Saya</h1>
-        <p>Ini adalah tiruan project seperti OmeGirl yang di-host di GitHub Pages.</p>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <div class="toast" id="toast">✓ COPIED TO CLIPBOARD!</div>
+
+    <div id="loader">
+        <div class="loader-logo">⚔ OmeGirl ⚔</div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar"></div>
+        </div>
+        <div class="loader-txt">LOADING GUILD DATA...</div>
     </div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <nav>
+        <a class="nav-brand" href="#hero">✮ OmeGirl</a>
+        <ul class="nav-links">
+            <li><a href="#story">Story</a></li>
+            <li><a href="#main-job">Job</a></li>
+            <li><a href="#content">Content</a></li>
+            <li><a href="#req">Requirement</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#discord">Discord</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-logo-wrap">
+            <div class="hero-logo-glow"></div>
+            <div class="hero-logo-ring2"></div>
+            <div class="hero-logo-ring"></div>
+            <img class="hero-logo" src="logo.gif" alt="OmeGirl Logo">
+        </div>
+
+        <h1 class="hero-title">✮ OmeGirl ✮</h1>
+        <p class="hero-sub">◆ OPEN RECRUITMENT ◆</p>
+
+        <div class="hero-cta">
+            <a href="https://discord.com/users/1129725852653994046" class="btn-primary btn-purple" target="_blank">
+                👑 DM ADMIN
+            </a>
+            <a href="https://discord.com/users/782611857386897408" class="btn-primary btn-pink" target="_blank">
+                🔮 DM WAKIL ADMIN
+            </a>
+            <a href="https://discord.gg/XzRw5XuYQW" class="btn-primary btn-outline" target="_blank">
+                🔗 JOIN SERVER
+            </a>
+        </div>
+    </section>
+
+    <section id="story">
+        <div class="section-inner">
+            <span class="section-label reveal">✦ Sejarah Guild ✦</span>
+            <h2 class="section-title reveal">The Story of OmeGirl</h2>
+            <div class="divider"></div>
+            <div class="glass-card reveal">
+                <p class="story-date">📅 FOUNDED: 25/06/2026 — 01:29 PM</p>
+                <p class="story-quote">
+                    OmeGirl adalah sebuah clan yang dibuat pada tanggal 25/06/2026 01:29 PM.<br><br>
+                    Tujuan dibentuknya clan ini adalah agar konten semakin seru dan menarik dimana kita bisa me-roasting
+                    sesama member yang braindead atau tidak memiliki spec.<br><br>
+                    Kami tidak pandang bulu, mau itu bulu hewan, bulu setan, ataupun bulu baok.<br><br>
+                    Jika ada satu orang yang menyenggol, maka suatu hari akan kami senggol kembali.<br><br>
+                    <em style="color: var(--pink-neon); font-style: normal; font-weight: 600;">(Jika kami menang.)</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-job" style="background: var(--deep);">
+        <div class="section-inner">
+            <span class="section-label reveal">⭑ Core Activities ⭑</span>
+            <h2 class="section-title reveal">Main Job</h2>
+            <div class="divider"></div>
+            <div class="job-grid">
+                <div class="job-card reveal">
+                    <div class="job-icon">⚔️</div>
+                    <div class="job-text">
+                        <strong>Senggol Bacok Rewel Cipok</strong>
+                        Senggol Jika Menang, Klarifikasi Jika Kalah. Ini adalah hukum tertinggi guild kami.
+                    </div>
+                </div>
+                <div class="job-card reveal">
+                    <div class="job-icon">🌱</div>
+                    <div class="job-text">
+                        <strong>Respect to Newbie</strong>
+                        Full Respect kepada newbie yang tidak braindead. Yang braindead? Full Roasting siap menanti.
+                    </div>
+                </div>
+                <div class="job-card reveal">
+                    <div class="job-icon">💀</div>
+                    <div class="job-text">
+                        <strong>NO SPEC = ROASTING</strong>
+                        Full Roasting jika gear member tidak memiliki bintang. Spec or be roasted.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content" style="background: var(--black);">
+        <div class="section-inner">
+            <span class="section-label reveal">⭑ Aktivitas Guild ⭑</span>
+            <h2 class="section-title reveal">Main Content</h2>
+            <div class="divider"></div>
+            <div class="content-grid">
+                <div class="content-card reveal">
+                    <div class="content-icon">🗣️</div>
+                    <div class="content-text">Full Yapping on Every Social Media</div>
+                </div>
+                <div class="content-card reveal">
+                    <div class="content-icon">💰</div>
+                    <div class="content-text">Gold Chest sambil merasa Top 1 Party</div>
+                </div>
+                <div class="content-card reveal">
+                    <div class="content-icon">📡</div>
+                    <div class="content-text">Tracking berkedok Up Spec</div>
+                </div>
+                <div class="content-card reveal">
+                    <div class="content-icon">🎥</div>
+                    <div class="content-text">Ganking RZ lock orang yang sudah dilepas karena masuk blob lalu dikontenin
+                    </div>
+                </div>
+                <div class="content-card reveal">
+                    <div class="content-icon">🚚</div>
+                    <div class="content-text">Transport jika tidak ada konten</div>
+                </div>
+                <div class="content-card reveal">
+                    <div class="content-icon">💀</div>
+                    <div class="content-text">Ganking BZ — zona berbahaya, penuh adrenalin</div>
+                </div>
+                <div class="content-card reveal">
+                    <div class="content-icon">🏃</div>
+                    <div class="content-text">Jika diganking balik maka RB terlebih dahulu</div>
+                </div>
+                <div class="content-card reveal">
+                    <div class="content-icon">💣</div>
+                    <div class="content-text">BombSquad Faction untuk mencari nama dan ketenaran</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="req" style="background: var(--deep);">
+        <div class="section-inner">
+            <span class="section-label reveal">⭑ Syarat Bergabung ⭑</span>
+            <h2 class="section-title reveal">Requirement</h2>
+            <div class="divider"></div>
+            <ul class="req-list">
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>No Minimum Fame — semua welcome, kecuali yang braindead</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>No Minimum Kill Fame — belum pernah bunuh juga gak apa-apa (dulu)</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>Minimal punya silver untuk membeli <strong>set T8 + Double Bladed T6</strong> untuk
+                        ganking</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>Tidak menangis karena mati 1 kali — mental baja required</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>Tahu arah mata angin — minimal Utara, Selatan, Timur, Barat</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>Tidak buta map — bisa baca minimap seperti manusia normal</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>Loading pergantian map maksimal <strong>5 detik</strong> — PC kentang dilarang</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>Tidak menjadi kereta api saat ganking — follow lead, bukan solo hero</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>Tidak miss saat ganking stag T4 menggunakan Battle Bracer — ini memalukan</span>
+                </li>
+                <li class="req-item reveal">
+                    <div class="req-check">✓</div>
+                    <span>Mengetahui bahwa <strong>Opavun</strong> adalah ROA T8 dengan 2 Big Camp dan 1 Small Camp Gold
+                        Chest</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="join" style="background: var(--black);">
+        <div class="section-inner" style="text-align:center;">
+            <span class="section-label reveal">⭑ Cara Masuk ⭑</span>
+            <h2 class="section-title reveal">Cara Bergabung</h2>
+            <div class="divider"></div>
+            <div class="glass-card reveal" style="display:inline-block; max-width:640px; width:100%;">
+                <p style="color:rgba(248,248,255,0.7); margin-bottom:16px; font-size:1rem; line-height:1.8;">
+                    Untuk bergabung silahkan ubah nama karakter menjadi:
+                </p>
+                <div class="join-code" id="joinCode" onclick="copyCode()">(NICKNAME) X OmeGirl 969</div>
+                <p class="copy-hint" id="copyHint">👆 KLIK UNTUK COPY</p>
+                <p style="margin-top:20px; color:rgba(248,248,255,0.5); font-size:0.85rem;">
+                    Setelah mengganti nama, hubungi admin atau wakil admin untuk konfirmasi.
+                </p>
+                <div style="margin-top:24px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                    <a href="https://discord.com/users/1129725852653994046" class="btn-primary btn-purple"
+                        target="_blank">👑 DM Admin</a>
+                    <a href="https://discord.com/users/782611857386897408" class="btn-primary btn-pink"
+                        target="_blank">🔮 DM Wakil Admin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" style="background: var(--deep);">
+        <div class="section-inner">
+            <span class="section-label reveal">⭑ Pemimpin Guild ⭑</span>
+            <h2 class="section-title reveal">Leadership</h2>
+            <div class="divider"></div>
+            <div class="leader-grid">
+                <div class="leader-card king reveal">
+                    <div class="leader-avatar">👑</div>
+                    <div class="leader-name">OmeGirl King</div>
+                    <div class="leader-role">Ketua Guild</div>
+                    <a href="https://discord.com/users/1129725852653994046" class="btn-primary btn-primary"
+                        style="background:linear-gradient(135deg,#c8960c,#fbbf24);color:#0a0010;font-weight:900;box-shadow:0 0 20px rgba(251,191,36,0.4);display:inline-flex;margin:0 auto;"
+                        target="_blank">
+                        💬 DM OmeGirl King
+                    </a>
+                </div>
+                <div class="leader-card wk reveal">
+                    <div class="leader-avatar">🔮</div>
+                    <div class="leader-name">TahuuuuuuU</div>
+                    <div class="leader-role">Wakil Ketua Guild / Party Seller</div>
+                    <a href="https://discord.com/users/782611857386897408" class="btn-primary btn-primary"
+                        style="background:linear-gradient(135deg,#0090b8,#00d4ff);color:#050508;font-weight:900;box-shadow:0 0 20px rgba(0,212,255,0.4);display:inline-flex;margin:0 auto;"
+                        target="_blank">
+                        💬 DM TahuuuuuuU
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="discord">
+        <div class="discord-title reveal">Join Our Madness</div>
+        <p class="discord-desc reveal">
+            Masuk ke server Discord OmeGirl dan jadilah bagian dari guild paling santai, paling banyak roasting, dan
+            paling banyak klarifikasi di Albion Online.
+        </p>
+        <a href="https://discord.gg/XzRw5XuYQW" class="btn-primary btn-discord reveal" target="_blank">
+            🎮 JOIN DISCORD SERVER
+        </a>
+    </section>
+
+    <footer>
+        <span>OmeGirl</span> © 2026 | Senggol Jika Menang, Klarifikasi Jika Kalah
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
